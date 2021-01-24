@@ -1,0 +1,21 @@
+<h1>{{producto.name}}</h1>
+<hr>
+
+<div class="row">
+
+    <div class="col-sm-2">
+        <img class="card-img-top img-fluid" src="assets/img/{{producto.img}}">
+        <br><br>
+        <a [routerLink]="['/productos']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{producto.name}}</h3>
+        <hr>
+        <strong>Descripcion</strong>
+        <p> {{producto.descripcion}} </p>
+        <strong>Precio</strong>
+        <p>{{producto.price | currency:'COP'}}</p>
+    </div>
+
+</div>

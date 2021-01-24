@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<h1>Buscando: <small>{{ texto }}</small></h1>
+
+<div class="container py-4">
+
+  <h3  *ngIf="listaProductos.length<=0">No hay resultados</h3>
+
+  <div  *ngIf="listaProductos.length>0" class="row row-cols-1 row-cols-md-3">
+
+    <app-card-producto [producto]="producto" *ngFor="let producto of productosEncontrados"></app-card-producto>
+
+  </div>
+
+</div>

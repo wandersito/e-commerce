@@ -1,0 +1,12 @@
+<div class="col mb-4">
+
+    <div class="card h-100">
+      <img class="card-img-top img-fluid" src="assets/img/{{producto['img']}}" alt="...">
+      <div class="card-body bg-light">
+        <h5 class="card-title">{{producto['name']}}</h5>
+        <p class="card-text">{{ producto['price'] | currency:'COP ' }}</p>
+      </div>
+      <a [routerLink]="['/producto', producto['id']]" class="btn btn-primary btn-block">Mas informacion</a>
+    </div>
+    
+  </div>
