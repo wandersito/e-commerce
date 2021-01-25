@@ -1,21 +1,36 @@
-<h1>{{producto.name}}</h1>
+<h1>{{producto.nombre}}</h1>
 <hr>
 
 <div class="row">
 
     <div class="col-sm-2">
-        <img class="card-img-top img-fluid" src="assets/img/{{producto.img}}">
+        <img class="card-img-top img-fluid" src="assets/img/{{producto['img']}}">
         <br><br>
-        <a [routerLink]="['/productos']" class="btn btn-outline-danger btn-block">Regresar</a>
+        <a [routerLink]="['/productos']" class="btn btn-outline-danger">Regresar</a>
     </div>
 
-    <div class="col-md-8">
-        <h3>{{producto.name}}</h3>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-sm-9">
+                <h3>{{producto.nombre}}</h3>
+            </div>
+            <div class="col-sm-1 mr-auto">
+                <button class="btn btn-primary">
+                    <i [routerLink]="['/editar', producto['id']]" class="fa fa-pencil"> Editar</i>
+                </button>
+            </div>
+            <div class="col-sm-1 mr-auto">
+                <button class="btn btn-primary" (click)="eliminarProducto(producto['id'])">
+                    <i class="fa fa-minus"> Eliminar</i>
+                </button>
+            </div>
+        </div>  
         <hr>
         <strong>Descripcion</strong>
         <p> {{producto.descripcion}} </p>
         <strong>Precio</strong>
-        <p>{{producto.price | currency:'COP'}}</p>
+        <p>{{producto.precio | currency:'COP'}}</p>
     </div>
+    <div class="col-md-6"></div>
 
 </div>

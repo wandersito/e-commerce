@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
+  buscar?:string;
+
   constructor(private router:Router ) { }
 
   ngOnInit(): void {
@@ -19,6 +21,7 @@ export class NavbarComponent implements OnInit {
     if(texto.length>0){
       this.router.navigate( ['/buscar', texto] );
     }
+    this.buscar = '';
   }
 
 }

@@ -5,7 +5,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { BuscadorComponent } from './components//buscador/buscador.component';
 // import { TemplateComponent } from './pages/template/template.component';
-import { ReactiveComponent } from './pages/reactive/reactive.component';
+import { ReactiveComponent } from './pages/agregar/agregar.component';
 
 
 
@@ -13,9 +13,10 @@ import { ReactiveComponent } from './pages/reactive/reactive.component';
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'productos', component: ProductosComponent },
-    { path: 'producto/:id', component: ProductoComponent },
+    { path: 'productos/:id', component: ProductoComponent },
     { path: 'about', component: AboutComponent },
-    { path: 'crear', component: ReactiveComponent },
+    { path: 'agregar', component: ReactiveComponent },
+    { path: 'editar/:id', component: ReactiveComponent },
     { path: 'buscar/:texto', component: BuscadorComponent },
     { path: '**', pathMatch:'full', redirectTo: 'home' }
 ];

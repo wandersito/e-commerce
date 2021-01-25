@@ -28,7 +28,7 @@ export class BuscadorComponent implements OnInit {
           this.texto = this.texto.toLocaleLowerCase();
           console.log(this.texto);
           for(let producto of this.listaProductos){
-              let nombre = producto.name.toLowerCase();
+              let nombre = producto.nombre.toLowerCase();
               if( nombre.indexOf( this.texto ) >= 0 ){
                 this.productosEncontrados.push( producto );
               }

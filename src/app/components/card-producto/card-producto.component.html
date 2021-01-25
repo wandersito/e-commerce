@@ -1,12 +1,12 @@
 <div class="col mb-4">
 
     <div class="card h-100">
-      <img class="card-img-top img-fluid" src="assets/img/{{producto['img']}}" alt="...">
+      <img class="card-img-top img-fluid" src="assets/img/{{producto['img']}}">
       <div class="card-body bg-light">
-        <h5 class="card-title">{{producto['name']}}</h5>
-        <p class="card-text">{{ producto['price'] | currency:'COP ' }}</p>
+        <h5 class="card-title">{{producto['nombre']}}</h5>
+        <p class="card-text">{{ producto['precio'] | currency:'COP ' }}</p>
       </div>
-      <a [routerLink]="['/producto', producto['id']]" class="btn btn-primary btn-block">Mas informacion</a>
+      <a [routerLink]="['/productos', producto['id']]" class="btn btn-primary btn-block">Mas informacion</a>
     </div>
     
   </div>

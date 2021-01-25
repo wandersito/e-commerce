@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 //Rutas
@@ -21,10 +22,15 @@ import { ProductosService } from './services/productos.service';
 import { ProductoComponent } from './components/producto/producto.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { CardProductoComponent } from './components/card-producto/card-producto.component';
-import { ReactiveComponent } from './pages/reactive/reactive.component';
+import { ReactiveComponent } from './pages/agregar/agregar.component';
 import { TemplateComponent } from './pages/template/template.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ConfirmarComponent } from './components/confirmar/confirmar.component';
 
 @NgModule({
+  exports: [
+    MatDialogModule
+  ],
   declarations: [
     AppComponent,
     NavbarComponent,
@@ -37,14 +43,16 @@ import { TemplateComponent } from './pages/template/template.component';
     BuscadorComponent,
     CardProductoComponent,
     ReactiveComponent,
-    TemplateComponent
+    TemplateComponent,
+    ConfirmarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     APP_ROUTING,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NoopAnimationsModule
   ],
   providers: [
     ProductosService
